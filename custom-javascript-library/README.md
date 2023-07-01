@@ -194,7 +194,7 @@ Adress <textarea id='ad' name='ad'></textarea>
 Select City
 <select id='ct' name='ct'>
 <option value='-1'>Select City</option>
-<option value='1'>Manawar</option>
+<option value='1'>Bhopal</option>
 <option value='2'>Ujjain</option>
 <option value='3'>Dewas</option>
 <option value='4'>Indore</option>
