@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<title>AJAX Examples</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src='js/customJavascriptLibrary.js'></script> 
+<script>
+function abBeforeOpening()
+{
+//alert('Modal with ab is about to be opened');
+return true;
+}
+function abOpened()
+{
+//alert('Modal with ab opened');
+}
+function abBeforeClosing()
+{
+//alert('Modal with ab is about to be closed');
+return true;
+}
+function abClosed()
+{
+//alert('Modal with ab closed');
+}
+
+function createModal1()
+{
+$$$.modals.show("ab");
+}
+
+function loader()
+{
+var all=document.getElementsByTagName("*");
+var i;
+for(i=0;i<all.length;i++)
+{
+if(all[i].hasAttribute("forModal"))
+{
+if(all[i].getAttribute("forModal").toUpperCase()=="TRUE")
+{
+all[i].setAttribute("forModal","false");
+ds.modals[ds.modals.length]=new Modal(all[i]);
+i--;
+}
+}
+} 
+}
+
+function xyz()
+{
+var xx=document.getElementById("myTextBox");
+//alert(xx);
+}
+
+window.addEventListener('load',loader);
+</script>
+</head>
+<body>
+<button onclick='createModal1()'>Show First It</button>
+<div id='ab' style='display:none' forModal='true' size="600x300" header="Some Heading" footer="Some Footer" maskColor="grey" modalBackgroundColor="white" closeButton="true" beforeOpening="abBeforeOpening()" afterOpening="abOpened()" beforeClosing="abBeforeClosing()" afterClosing="abClosed()">
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+<input type='text' id='myTextBox' value='Great'>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+Messi Cristiano Pele Maradona Mbappe Haaland<br>
+GOAT
+</div>
+<button onclick='xyz()'>Cool Button</button>
+</body>
+</html>
